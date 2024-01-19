@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+
+  <style>
+    #colorDiv {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="colorButton">Click Me</button>
+  <div id="colorDiv"></div>
+
+  <script>
+    const colorButton = document.getElementById('colorButton');
+    const colorDiv = document.getElementById('colorDiv');
+
+    colorButton.addEventListener('click', () => {
+      if (colorDiv.style.backgroundColor === 'green') {
+        colorDiv.style.backgroundColor = 'blue';
+      } else {
+        colorDiv.style.backgroundColor = 'green';
+      }
+    });
+  </script>
+
+</body>
+</html>
